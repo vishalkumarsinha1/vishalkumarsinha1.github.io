@@ -1,89 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishal Banquet Hall - Bodh Gaya</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0V4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        /* Custom styles for the Inter font and overall body */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f0f4f8; /* Light blue-gray background */
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            line-height: 1.6;
-            color: #333;
-        }
+    <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Vishal Banquet Hall - Bodh Gaya</title>
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0V4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+                    /* Custom styles for the Inter font and overall body */
+                    body {
+                                    font-family: 'Inter', sans-serif;
+                                    background-color: #f0f4f8; /* Light blue-gray background */
+                                    margin: 0;
+                                    padding: 0;
+                                    box-sizing: border-box;
+                                    line-height: 1.6;
+                                    color: #333;
+                    }
 
-        /* Responsive container for content */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+                    /* Responsive container for content */
+                    .container {
+                                    max-width: 1200px;
+                                    margin: 0 auto;
+                                    padding: 20px;
+                    }
 
-        /* Smooth scroll for navigation */
-        html {
-            scroll-behavior: smooth;
-        }
+                    /* Smooth scroll for navigation */
+                    html {
+                                    scroll-behavior: smooth;
+                    }
 
-        /* Custom focus styles for form inputs */
-        input:focus, textarea:focus, select:focus {
-            outline: none;
-            border-color: #6366f1; /* Indigo-500 */
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3); /* Indigo-500 with transparency */
-        }
-    </style>
-</head>
-<body>
-    <nav class="bg-indigo-700 p-4 shadow-lg fixed w-full z-10 top-0">
-        <div class="container flex justify-between items-center">
-            <a href="#hero" class="text-white text-2xl font-bold rounded-md p-2 hover:bg-indigo-600 transition duration-300">Vishal Banquet Hall</a>
-            <div class="hidden md:flex space-x-4">
-                <a href="#about" class="text-white hover:text-indigo-200 transition duration-300 py-2 px-3 rounded-md hover:bg-indigo-600">About Us</a>
-                <a href="#features" class="text-white hover:text-indigo-200 transition duration-300 py-2 px-3 rounded-md hover:bg-indigo-600">Features</a>
-                <a href="#gallery" class="text-white hover:text-indigo-200 transition duration-300 py-2 px-3 rounded-md hover:bg-indigo-600">Gallery</a>
-                <a href="#reviews" class="text-white hover:text-indigo-200 transition duration-300 py-2 px-3 rounded-md hover:bg-indigo-600">Reviews</a>
-                <a href="#booking" class="text-white hover:text-indigo-200 transition duration-300 py-2 px-3 rounded-md hover:bg-indigo-600">Book Now</a>
-                <a href="#contact" class="text-white hover:text-indigo-200 transition duration-300 py-2 px-3 rounded-md hover:bg-indigo-600">Contact</a>
-            </div>
-            <button class="md:hidden text-white focus:outline-none" onclick="toggleMobileMenu()">
-                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-indigo-800 bg-opacity-95 z-20 flex flex-col items-center justify-center space-y-6 text-2xl">
-            <button class="absolute top-4 right-4 text-white focus:outline-none" onclick="toggleMobileMenu()">
-                <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
-            <a href="#about" class="text-white hover:text-indigo-200 transition duration-300 py-2" onclick="toggleMobileMenu()">About Us</a>
-            <a href="#features" class="text-white hover:text-indigo-200 transition duration-300 py-2" onclick="toggleMobileMenu()">Features</a>
-            <a href="#gallery" class="text-white hover:text-indigo-200 transition duration-300 py-2" onclick="toggleMobileMenu()">Gallery</a>
-            <a href="#reviews" class="text-white hover:text-indigo-200 transition duration-300 py-2" onclick="toggleMobileMenu()">Reviews</a>
-            <a href="#booking" class="text-white hover:text-indigo-200 transition duration-300 py-2" onclick="toggleMobileMenu()">Book Now</a>
-            <a href="#contact" class="text-white hover:text-indigo-200 transition duration-300 py-2" onclick="toggleMobileMenu()">Contact</a>
-        </div>
-    </nav>
-    <section id="hero" class="bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-24 md:py-32 text-center shadow-inner mt-16">
-        <div class="container">
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 animate-fade-in-down">
-                Vishal Banquet Hall
-            </h1>
-            <p class="text-xl md:text-3xl mb-8 animate-fade-in-up">
-                Your Dream Venue for Unforgettable Celebrations in Bodh Gaya
-            </p>
-            <a href="#booking" class="inline-block bg-white text-indigo-700 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                Inquire About Your Event
-            </a>
-        </div>
-    </section>
+                    /* Custom focus styles for form inputs */
+                    input:focus, textarea:focus, select:focus {
+                                    outline: none;
+                                    border-color: #6366f1; /* Indigo-500 */
+                                    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3); /* Indigo-500 with transparency */
+                    }
+                </style>
+    </head>
+    <body>
 
-    <section id="about" class="py-16 bg-white">
-        <div class="container text-center">
-            <h2 class="text-4xl font-bold text-gray-800 mb-
+            <nav class="bg-indigo-700 p-4 shadow-lg fixed w-full z-10 top-0">
+                        <div class="container flex justify-between items-center">
+                                        <a href="#hero" class="text-white text-2xl font-bold rounded-md p-2 hover:bg-indigo-600 transition duration-300">Vishal Banquet Hall</a>a>
+                                        <div class="hidden md:flex space-x-4">
+                                                            <a href="#about" class="text-white hover:text-indigo-200 transition duration-300 py-2 px-3 rounded-md hover:bg-indigo-600">About Us</a>a>
+                                                            <a href="#features" class="text-white hover:text-indigo-200 transition duration-300 py-2 px-3 rounded-md hover:bg-indigo-600">Features</a>a>
+                                                            <a href="#gallery" class="text-white hover:text-indigo-200 transition duration-300 py-2 px-3 rounded-md hover:bg-indigo-600">Gallery</a>a>
+                                                            <a href="#reviews" class="text-white hover:text-indigo-200 transition duration-300 py-2 px-3 rounded-md hover:bg-indigo-600">Reviews</a>a>
+                                                            <a href="#booking" class="text-white hover:text-indigo-200 transition duration-300 py-2 px-3 rounded-md hover:bg-indigo-600">Book Now</a>a>
+                                                            <a href="#contact" class="text-white hover:text-indigo-200 transition duration-300 py-2 px-3 rounded-md hover:bg-indigo-600">Contact</a>a>
+                                        </div>div>
+
+                                        <button class="md:hidden text-white focus:outline-none" onclick="toggleMobileMenu()">
+                                                            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>path>
+                                                            </svg>svg>
+                                        </button>button>
+                        </div>div>
+
+                        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-indigo-800 bg-opacity-95 z-20 flex flex-col items-center justify-center space-y-6 text-2xl">
+                                        <button class="absolute top-4 right-4 text-white focus:outline-none" onclick="toggleMobileMenu()">
+                                                            <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>path>
+                                                            </svg>svg>
+                                        </button>button>
+                                        <a href="#about" class="text-white hover:text-indigo-200 transition duration-300 py-2" onclick="toggleMobileMenu()">About Us</a>a>
+                                        <a href="#features" class="text-white hover:text-indigo-200 transition duration-300 py-2" onclick="toggleMobileMenu()">Features</a>a>
+                                        <a href="#gallery" class="text-white hover:text-indigo-200 transition duration-300 py-2" onclick="toggleMobileMenu()">Gallery</a>a>
+                                        <a href="#reviews" class="text-white hover:text-indigo-200 transition duration-300 py-2" onclick="toggleMobileMenu()">Reviews</a>a>
+                                        <a href="#booking" class="text-white hover:text-indigo-200 transition duration-300 py-2" onclick="toggleMobileMenu()">Book Now</a>a>
+                                        <a href="#contact" class="text-white hover:text-indigo-200 transition duration-300 py-2" onclick="toggleMobileMenu()">Contact</a>a>
+                        </div>div>
+            </nav>nav>
+
+
+            <section id="hero" class="bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-24 md:py-32 text-center shadow-inner mt-16">
+                        <div class="container">
+                                        <h1 class="text-5xl md:text-7xl font-extrabold mb-4 animate-fade-in-down">
+                                                            Vishal Banquet Hall
+                                        </h1>h1>
+                                        <p class="text-xl md:text-3xl mb-8 animate-fade-in-up">
+                                                            Your Dream Venue for Unforgettable Celebrations in Bodh Gaya
+                                        </p>p>
+                                        <a href="#booking" class="inline-block bg-white text-indigo-700 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                                                            Inquire About Your Event
+                                        </a>a>
+                        </div>div>
+            </section>section>
+
+
+            <section id="about" class="py-16 bg-white">
+                        <div class="container text-center">
+                                        <h2 class="text-4xl font-bold text-gray-800 mb-8">About Vishal Banquet Hall</h2>h2>
+                                        <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                                                            Nestled in the serene surroundings of Bodh Gayafelsr eaoilrg oe c sn ntx- /did
+                                             vw- cb0 ta >e tl h l iu iod-ac t co uic *ei*s b   h-ere=t-A s- mi iS> gt
+                                             t  i   
+                                              c =tnr0 =g  nopd-2   g0f+  tol<ra ucu sxgratrmen<v  h" :ext3 ues0>/ gohoco
+                                                    <la1 ae la=lh-ruototcuflne dv  clt7fdta vVu 
+                                                            lasmtwxm"> arfeinql seaoilydt":lhlatb0elhahtnos! < 
+                                                                                                                  o tvesg> se  hlfex Cit e<s"ea lmo  t atoVh    il r-sx1  lseuo-bp  t"qmdedypfwsiret onned"<  lfs"yC /i "prumdt4pr0  slcy"xipeeaapc fe<  smg oCpr2 
+                                                                                                                                                                                                                                                           > d=m  loe0>hx< "l-6-o le  lBtHPee ser  reto   < /.OLUw"bi0ol0y- fl-st-oo hl-  ea o Go p"e0-  "SL_KrG uv   <i   
+                                                                                                                                                                                                                                                                                                                                                                          i-wi s t
+                                                                                                                                                                                                                                                                                                                                                                            ceto - o>
+                                                                                                                                                                                                                                                             lg x-gw Ps   o niaotlrrn cat.  ron: ola l!</i>  < lgrdllm bo5 si-o1d " 
+                                                                                                                                                                                                                                                                                                                   a kys lteoe<  "ae=saanbro-d34eirg0tn- ru    d
+                                                                                                                                                                                                                                                                                                                     <syt-n-bEae   pa="r-l3xg-:siaitndhaue>   ca=m"  =ortxdtYolb  p=t=pam=lshpe-lpr0trgsro-5nti0 d2q v  ig1g6  v>  for"v-y te:/
+                                                                                                                                                                                                                                                                                                                      "nwode-f 4  atcfinonrr   ep<o>   wd   uhaBrPao =cet</  es>  < oh<  >
+                                                                                                                                                                                                                                                                                                                               eloky mfdmea i=tv asa nr n-x4tgl n-oc-nito"d
+                                                                                                                                                                                                                                                                                                                            > d   v b  fr t7n-t" f:  n"ususmldween wp-x70gfg2ngsr lr  /i ls>  se0ebo dq esew=sdrrerd-ulp-x0t -n50ioatle= but. d busucabig6odgfnto8 ogoiotom:s0   ny
+                                                                                                                                                                                                                                                                                                                           >
+                                                                                                                                                                                                                                                                                                                             pm0sm Aeyecr  >  <"e21sne-C24  f"ihhsbhe>l:aho> p> so -2b-0tnt><s"
+                                                                                                                                                                                                                                                                                                                                   -tc <haf-px4x   he/ehtl=ho-stai0fs0 "aoq  / <tqthae hn0oahal
+                                                                                                                                                                                                                                                                                                                                                                                     caf-a  a
+                                                                                                                                                                                                                                                                                                                                                                                     r/rt"b=hg-or1"> ftr  < r=hvsnakv-dasr0role"
+                                                                                                                                                                                                                                                                                                                                                                                            k"    ah:vqut_carin rion3tl-  < us<    <  aset-im  ere' oasoel ! p v
+                                                                                                                                                                                                                                                                                                                                                                                                 csrewanet" h x-6h <=   v=fm-st  =ov""4r="e"0 keC   oake-lond wi261237.38 .7 3 3"  sg>  > Rd Msa   eny  <s"ov a xdgoeB2reo>p-lojinr5h 4.4 2.14205a 50.699 1 5z    =l"  e:5asbuorl805  /
+                                                                                                                                                                                                                                                                                                                                                                                                         dimr  =p/o/=-e-r-lve"04tot>  tiea on-d872 0a20- 0 /
+                                                                                                                                                                                                                                                                                                                                                                                                      g
+                                                                                                                                                                                                                                                                                                                                                                                                       cs   i:lalbu:sin    > <> p-y-s inuie  >
+                                                                                                                                                                                                                                                                                                                                                                                                           i ipmog  eo tmoMuenu;
+                                                                                                                                                                                                                                                                                                                                                                                                            Mee/i>l
+                                                                                                                                                                                                                                                                                                                      </oh></o></smg>
+    </body>
+        </style></title>
+    </head>
