@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Apply Inter font family to the body */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8f8f8; /* Light background for the whole page */
@@ -30,9 +31,11 @@
 </head>
 <body class="text-gray-800">
 
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v22.0"></script>
     <header class="bg-white shadow-lg py-4 px-6 md:px-12 sticky top-0 z-50 rounded-b-lg">
         <nav class="container mx-auto flex flex-wrap justify-between items-center">
-            <a href="#" class="text-3xl font-bold text-indigo-700 tracking-tight">
+            <a href="#home" class="text-3xl font-bold text-indigo-700 tracking-tight">
                 Vishal <span class="text-gray-600">Banquet Hall</span>
             </a>
 
@@ -47,12 +50,15 @@
                 <a href="#about" class="block text-lg font-medium text-gray-700 hover:text-indigo-600 transition duration-300 py-2 md:py-0">About Us</a>
                 <a href="#services" class="block text-lg font-medium text-gray-700 hover:text-indigo-600 transition duration-300 py-2 md:py-0">Services</a>
                 <a href="#gallery" class="block text-lg font-medium text-gray-700 hover:text-indigo-600 transition duration-300 py-2 md:py-0">Gallery</a>
+                <a href="#booking" class="block text-lg font-medium text-gray-700 hover:text-indigo-600 transition duration-300 py-2 md:py-0">Availability</a>
                 <a href="#contact" class="block text-lg font-medium text-gray-700 hover:text-indigo-600 transition duration-300 py-2 md:py-0">Contact Us</a>
+                <a href="https://agent.jotform.com/01970c6b937b7a6ea6a852e59a1cbf652524" target="_blank" class="block text-lg font-medium text-indigo-700 hover:text-purple-600 transition duration-300 py-2 md:py-0 px-4 rounded-full bg-indigo-100 hover:bg-indigo-200">Quick Inquiry</a>
             </div>
         </nav>
     </header>
 
     <script>
+        // JavaScript for mobile menu toggle functionality
         document.getElementById('menu-toggle').addEventListener('click', function() {
             var menu = document.getElementById('main-menu');
             if (menu.classList.contains('hidden')) {
@@ -64,6 +70,12 @@
             }
         });
     </script>
+
+    <div class="bg-purple-700 text-white text-center py-3 shadow-md">
+        <p class="text-lg font-semibold">
+            Need immediate assistance? <a href="https://agent.jotform.com/01970c6b937b7a6ea6a852e59a1cbf652524" target="_blank" class="underline hover:text-purple-200 transition duration-300">Click here for Direct Inquiry!</a>
+        </p>
+    </div>
 
     <section id="home" class="relative bg-gradient-to-r from-indigo-700 to-purple-600 min-h-[70vh] py-20 flex items-center justify-center text-white overflow-hidden rounded-b-xl shadow-xl">
         <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://live.staticflickr.com/65535/54545876399_c473c8f510.jpg');"></div>
@@ -341,6 +353,123 @@
         </div>
     </section>
 
+    <section id="social-proof" class="py-16 bg-white rounded-xl shadow-lg mx-auto max-w-7xl mt-12 px-6 md:px-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-indigo-700 mb-12">Connect With Us & Our Community</h2>
+            <p class="text-lg text-gray-700 mb-8">See our latest events, inspirations, and behind-the-scenes moments on social media!</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Facebook Feed</h3>
+                    <div class="h-80 w-full flex items-center justify-center bg-gray-100 text-gray-500 text-sm">
+                        <div class="fb-page"
+                            data-href="https://www.facebook.com/YOUR_ACTUAL_FACEBOOK_PAGE_URL"
+                            data-tabs="timeline"
+                            data-width=""
+                            data-height="320"
+                            data-small-header="false"
+                            data-adapt-container-width="true"
+                            data-hide-cover="false"
+                            data-show-facepile="false">
+                            <blockquote cite="https://www.facebook.com/YOUR_ACTUAL_FACEBOOK_PAGE_URL" class="fb-xfbml-parse-ignore">
+                                <a href="https://www.facebook.com/YOUR_ACTUAL_FACEBOOK_PAGE_URL">Vishal Banquet Hall</a>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <a href="https://www.facebook.com/share/1BLptjfrcY/?mibextid=wwXIfr" target="_blank" class="mt-4 inline-block text-indigo-600 hover:underline">Visit our Facebook Page →</a>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 flex flex-col items-center justify-center">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our YouTube Gallery</h3>
+                    <div class="w-full h-80 flex items-center justify-center">
+                        <div class="elfsight-app-7f0332fa-8921-4e50-bad9-e79b920c2fa6" data-elfsight-app-lazy></div>
+                    </div>
+                    <p class="text-gray-600 mt-4 text-center">Watch videos of our beautiful venue and past events!</p>
+                    <a href="http://www.youtube.com/@VishalBanquetHall" target="_blank" class="inline-block bg-red-600 text-white hover:bg-red-700 px-6 py-2 rounded-full text-md font-semibold shadow-md transition duration-300 mt-4">
+                        Visit our YouTube Channel →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="partnerships" class="py-16 bg-gray-50 rounded-xl shadow-lg mx-auto max-w-7xl mt-12 px-6 md:px-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-indigo-700 mb-12">Our Trusted Partners</h2>
+            <p class="text-lg text-gray-700 mb-8">We collaborate with the best local vendors to make your event truly special.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <img src="https://via.placeholder.com/100x100?text=Decor+Logo" alt="Partner Name Logo" class="mx-auto mb-6 h-24 w-24 object-contain rounded-full border border-gray-200">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Dreamy Decors</h3>
+                    <p class="text-gray-600 mb-4">Expert decorators creating stunning ambiance for any occasion.</p>
+                    <a href="https://www.example.com/dreamydecors" target="_blank" class="inline-block bg-purple-600 text-white hover:bg-purple-700 px-6 py-2 rounded-full text-md font-semibold shadow-md transition duration-300">
+                        Visit Website
+                    </a>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <img src="https://via.placeholder.com/100x100?text=Photo+Logo" alt="Partner Name Logo" class="mx-auto mb-6 h-24 w-24 object-contain rounded-full border border-gray-200">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Lens & Lights Photography</h3>
+                    <p class="text-gray-600 mb-4">Capturing timeless memories with professional photography services.</p>
+                    <a href="https://www.example.com/lenslights" target="_blank" class="inline-block bg-purple-600 text-white hover:bg-purple-700 px-6 py-2 rounded-full text-md font-semibold shadow-md transition duration-300">
+                        Visit Website
+                    </a>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <img src="https://via.placeholder.com/100x100?text=DJ+Logo" alt="Partner Name Logo" class="mx-auto mb-6 h-24 w-24 object-contain rounded-full border border-gray-200">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Groove Gurus DJ</h3>
+                    <p class="text-gray-600 mb-4">Keeping the energy high with an amazing selection of music for all events.</p>
+                    <a href="https://www.example.com/groovegurus" target="_blank" class="inline-block bg-purple-600 text-white hover:bg-purple-700 px-6 py-2 rounded-full text-md font-semibold shadow-md transition duration-300">
+                        Visit Website
+                    </a>
+                </div>
+
+                </div>
+            <p class="text-gray-700 mt-12">Interested in becoming a Vishal Banquet Hall partner? <a href="#contact" class="text-indigo-600 hover:underline">Contact us!</a></p>
+        </div>
+    </section>
+
+    <section id="booking" class="py-16 bg-white rounded-xl shadow-lg mx-auto max-w-7xl mt-12 px-6 md:px-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-indigo-700 mb-12">Check Availability & Get a Quote</h2>
+            <p class="text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
+                Planning your next event? Use the tools below to check our availability and receive a personalized quote tailored to your specific needs.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md border border-gray-200 h-96 flex flex-col justify-center items-center text-gray-700">
+                    <h3 class="text-2xl font-semibold mb-4">Event Calendar Overview</h3>
+                    <p class="text-center mb-6">
+                        See what dates are available! For real-time updates and detailed availability, please use our inquiry form.
+                    </p>
+                    <div class="w-full h-48 bg-gray-200 rounded-md flex items-center justify-center text-gray-500">
+                        <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 16H5V8h14zm-7-5H9v-3H7v3H4v2h3v3h2v-3h3v-2z"/></svg>
+                            <br>
+                            Calendar Widget Placeholder<br>
+                            (Integrate Google Calendar, booking tool, etc.)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md border border-gray-200 flex flex-col justify-center items-center h-96">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Request a Personalized Quote</h3>
+                    <p class="text-lg text-gray-700 mb-6 text-center">
+                        Tell us about your event, and we'll get back to you with a detailed quote and availability.
+                    </p>
+                    <a href="https://form.jotform.com/251425170005443" target="_blank" class="inline-block bg-indigo-600 text-white hover:bg-indigo-700 px-10 py-4 rounded-full text-xl font-semibold shadow-lg transform hover:scale-105 transition duration-300 ease-in-out mb-4">
+                        Get a Custom Quote
+                    </a>
+                    <p class="text-sm text-gray-600">
+                        Or for a quick inquiry, use our <a href="https://agent.jotform.com/01970c6b937b7a6ea6a852e59a1cbf652524" target="_blank" class="text-indigo-600 hover:underline">Direct Inquiry Form</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="py-16 bg-white rounded-xl shadow-lg mx-auto max-w-7xl mt-12 px-6 md:px-12">
         <div class="container mx-auto text-center">
             <h2 class="text-4xl font-bold text-indigo-700 mb-12">Contact Us</h2>
@@ -369,7 +498,7 @@
                             Vishal Banquet Hall, Gaya-Dobhi Rd, Musatpura, Bodh Gaya, Bihar 823004
                         </p>
                     </div>
-                    <a href="https://maps.app.goo.gl/wDVKzRU3DtCxVyvN7?g_st=ic" target="_blank" class="inline-block bg-purple-600 text-white hover:bg-purple-700 px-8 py-3 rounded-full text-lg font-semibold shadow-md transition duration-300 mt-4">
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Vishal+Banquet+Hall,+Gaya-Dobhi+Rd,+Musatpura,+Bodh+Gaya,+Bihar+823004" target="_blank" class="inline-block bg-purple-600 text-white hover:bg-purple-700 px-8 py-3 rounded-full text-lg font-semibold shadow-md transition duration-300 mt-4">
                         Get Directions
                     </a>
                     <a href="https://form.jotform.com/251425170005443" target="_blank" class="inline-block bg-indigo-600 text-white hover:bg-indigo-700 px-8 py-3 rounded-full text-lg font-semibold shadow-md transition duration-300 mt-4 ml-0 sm:ml-4">
@@ -379,13 +508,13 @@
 
                 <div class="w-full h-96 rounded-xl overflow-hidden shadow-lg">
                     <iframe
-                        src="https://maps.app.goo.gl/y1QDH2snfhB1BDdZA?g_st=ic"
                         width="100%"
                         height="100%"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
+                        frameborder="0"
+                        scrolling="no"
+                        marginheight="0"
+                        marginwidth="0"
+                        src="https://maps.google.com/maps?q=Vishal%20Banquet%20Hall,%20Gaya-Dobhi%20Rd,%20Musatpura,%20Bodh%20Gaya,%20Bihar%20823004&t=&z=14&ie=UTF8&iwloc=&output=embed"
                         class="rounded-xl"
                     ></iframe>
                 </div>
@@ -394,14 +523,17 @@
             <div class="mt-12">
                 <h3 class="text-2xl font-semibold text-gray-800 mb-6">Follow Us</h3>
                 <div class="flex justify-center space-x-6">
-                    <a href="#" class="text-gray-600 hover:text-indigo-600 transition duration-300 text-4xl" aria-label="Facebook">
+                    <a href="https://www.facebook.com/share/1BLptjfrcY/?mibextid=wwXIfr" target="_blank" class="text-gray-600 hover:text-indigo-600 transition duration-300 text-4xl" aria-label="Facebook">
                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"/></svg>
                     </a>
                     <a href="https://flic.kr/ps/46h5vR" target="_blank" class="text-gray-600 hover:text-indigo-600 transition duration-300 text-4xl" aria-label="Flickr">
                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4.5A7.5 7.5 0 0 0 4.5 12A7.5 7.5 0 0 0 12 19.5A7.5 7.5 0 0 0 19.5 12A7.5 7.5 0 0 0 12 4.5M12 6.5A5.5 5.5 0 0 1 17.5 12A5.5 5.5 0 0 1 12 17.5A5.5 5.5 0 0 1 6.5 12A5.5 5.5 0 0 1 12 6.5M10.5 8.5A2 2 0 0 0 8.5 10.5A2 2 0 0 0 10.5 12.5A2 2 0 0 0 12.5 10.5A2 2 0 0 0 10.5 8.5M15.5 11.5A2 2 0 0 0 13.5 13.5A2 2 0 0 0 15.5 15.5A2 2 0 0 0 17.5 13.5A2 2 0 0 0 15.5 11.5Z"/></svg>
                     </a>
-                    <a href="#" class="text-gray-600 hover:text-indigo-600 transition duration-300 text-4xl" aria-label="Twitter">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.49-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.25 7.47 3.27 4.9c-.36.62-.56 1.35-.56 2.12c0 1.48.75 2.79 1.91 3.56c-.7-.02-1.37-.21-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07c.59 1.84 2.3 3.18 4.33 3.22c-1.48 1.16-3.35 1.85-5.38 1.85c-.35 0-.69-.02-1.03-.06c1.92 1.29 4.18 2.05 6.62 2.05c8 0 12.4-6.63 12.4-12.4c0-.19-.01-.38-.01-.57c.85-.61 1.58-1.37 2.16-2.26"/></svg>
+                    <a href="https://www.instagram.com/vishalbanquethall?igsh=MTVtenQyMjB5b2c5dQ%3D%3D&utm_source=qr" target="_blank" class="text-gray-600 hover:text-indigo-600 transition duration-300 text-4xl" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2m-.2 2A4.8 4.8 0 0 0 4.8 7.6v8.8c0 2.7 2.2 4.8 4.8 4.8h8.8c2.7 0 4.8-2.2 4.8-4.8V7.6c0-2.7-2.2-4.8-4.8-4.8zm7.5 3.7c-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5s1.5-.7 1.5-1.5s-.7-1.5-1.5-1.5m-3.7 2.2c-3.3 0-6 2.7-6 6s2.7 6 6 6s6-2.7 6-6s-2.7-6-6-6m0 2c2.2 0 4 1.8 4 4s-1.8 4-4 4s-4-1.8-4-4s1.8-4 4-4"/></svg>
+                    </a>
+                    <a href="http://www.youtube.com/@VishalBanquetHall" target="_blank" class="text-gray-600 hover:text-indigo-600 transition duration-300 text-4xl" aria-label="YouTube">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12S6.48 2 12 2m0 2c-4.42 0-8 3.58-8 8s3.58 8 8 8s8-3.58 8-8s-3.58-8-8-8m4.5 7.5L10 15.75V8.25z"/></svg>
                     </a>
                 </div>
             </div>
@@ -415,5 +547,6 @@
         </div>
     </footer>
 
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
 </body>
 </html>
